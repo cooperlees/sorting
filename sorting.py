@@ -190,7 +190,15 @@ def main() -> int:
     print(f"Generated a list of {args.list_length} floats in {list_gen_runtime}s")
 
     runtimes: Dict[str, float] = {}
-    sort_algorithms = (bubble_sort, selection_sort, insertion_sort, heap_sort, merge_sort, quick_sort, sorted)
+    sort_algorithms = (
+        bubble_sort,
+        selection_sort,
+        insertion_sort,
+        heap_sort,
+        merge_sort,
+        quick_sort,
+        sorted,
+    )
 
     # sorted uses Timsort - https://en.wikipedia.org/wiki/Timsort - Default since 2.3
     for algo in sort_algorithms:
@@ -206,7 +214,9 @@ def main() -> int:
     random_list.sort()
     runtimes[".sort()"] = time() - dot_sort_start_time
 
-    print(f"\nSorting Algorithms (slowest to fastest):")
+    print(f"\nSorting Algorithms (slowest to fastest)")
+    print("- sorted() and .sort() use Timsort: https://en.wikipedia.org/wiki/Timsort")
+    print("  - sorted() constructs a new list while .sort() modified the current list")
     for func_name in sorted(runtimes, key=runtimes.get, reverse=True):
         sep = "\t"
         if len(func_name) < 14:
