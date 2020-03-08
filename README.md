@@ -21,7 +21,7 @@ Generated a list of 1469 floats in 0.0001499652862548828s
 
 Sorting Algorithms (slowest to fastest)
 # sorted() and .sort() use Timsort: https://en.wikipedia.org/wiki/Timsort
-# sorted() constructs a new list while .sort() modified the current list
+# sorted() constructs a new list while .sort() modifies the current list
 
 - bubble_sort:		0.29520320892333984s
 - insertion_sort:	0.08135485649108887s
