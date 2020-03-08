@@ -215,8 +215,8 @@ def main() -> int:
     runtimes[".sort()"] = time() - dot_sort_start_time
 
     print(f"\nSorting Algorithms (slowest to fastest)")
-    print("- sorted() and .sort() use Timsort: https://en.wikipedia.org/wiki/Timsort")
-    print("  - sorted() constructs a new list while .sort() modified the current list")
+    print("# sorted() and .sort() use Timsort: https://en.wikipedia.org/wiki/Timsort")
+    print("# sorted() constructs a new list while .sort() modifies the current list\n")
     for func_name in sorted(runtimes, key=runtimes.get, reverse=True):
         sep = "\t"
         if len(func_name) < 14:

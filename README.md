@@ -16,16 +16,19 @@ sorting.py: error: the following arguments are required: list_length
 - `list_length`: Integer length of the list of random floats to sort
 
 ```
-cooper-mbp1:interview_coding cooper$ python3 sorting/sorting.py 1469
-Generated a list of 1469 floats in 0.00016999244689941406s
+cooper-mbp1:sorting cooper$ python3 sorting.py 1469
+Generated a list of 1469 floats in 0.0001499652862548828s
 
-Sorting Algorithms (slowest to fastest):
-- bubble_sort:		0.2720770835876465s
-- insertion_sort:	0.08428597450256348s
-- selection_sort:	0.0706028938293457s
-- heap_sort:		0.006710052490234375s
-- merge_sort:		0.0056209564208984375s
-- quick_sort:		0.002576112747192383s
-- sorted:		0.00012230873107910156s
-- .sort():		0.00011515617370605469s
+Sorting Algorithms (slowest to fastest)
+# sorted() and .sort() use Timsort: https://en.wikipedia.org/wiki/Timsort
+# sorted() constructs a new list while .sort() modified the current list
+
+- bubble_sort:		0.29520320892333984s
+- insertion_sort:	0.08135485649108887s
+- selection_sort:	0.07391071319580078s
+- heap_sort:		0.0062999725341796875s
+- merge_sort:		0.004397869110107422s
+- quick_sort:		0.002928018569946289s
+- sorted:		0.0002429485321044922s
+- .sort():		0.00018596649169921875s
 ```
